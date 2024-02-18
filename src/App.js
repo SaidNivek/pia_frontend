@@ -1,12 +1,18 @@
+import {Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './containers/Home';
+import Calendar from './containers/Calendar';
 import './App.css';
 
 function App() {
   return (
     <>
       <Navbar />
-      <h1>Main Page</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/calendar" element={<Calendar />} />
+      </Routes>
       <Footer />
     </>
   );
